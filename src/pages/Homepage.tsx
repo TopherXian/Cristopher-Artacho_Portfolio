@@ -127,7 +127,7 @@ const Homepage = () => {
             lg:pl-[5rem] lg:text-lg_content
             md:pl-[3rem] md:text-md_content
             text-sm_content">
-              TailwindCSS, MongoDB, React, NodeJS, Firebase
+              TailwindCSS, MongoDB, React, NodeJS, Firebase, Vercel
             </p>
               <p className="xl:pl-[5rem] xl:text-xl_heading
               lg:pl-[5rem] lg:text-lg_heading

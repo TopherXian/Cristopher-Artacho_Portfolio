@@ -10,10 +10,10 @@ const Navbar = () => {
     { webPage: "Contact", id: "contact" },
   ];
 
-  const scrollToSection = (id) => {
+  const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) element.scrollIntoView({ behavior: "smooth" });
-    setMenuOpen(false); // close menu after click
+    setMenuOpen(false);
   };
 
   return (

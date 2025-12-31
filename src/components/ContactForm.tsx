@@ -1,7 +1,8 @@
 import { useRef, useState } from "react";
-import emailjs from "emailjs/browser";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
+    console.log(emailjs)
     console.log(import.meta.env.VITE_EMAILJS_SERVICE_ID);
   const form = useRef(null);
 
@@ -73,7 +74,7 @@ const ContactForm = () => {
         value={formData.name}
         onChange={handleChange}
         required
-        className="w-full bg-white text-black outline-none focus:ring-2 focus:ring-highlight1"
+        className="pl-[0.5rem] py-[0.5rem] w-full bg-white text-black outline-none focus:ring-2 focus:ring-highlight1"
       />
 
       <input
@@ -83,7 +84,7 @@ const ContactForm = () => {
         value={formData.email}
         onChange={handleChange}
         required
-        className="w-full bg-white text-black outline-none focus:ring-2 focus:ring-highlight1"
+        className=" pl-[0.5rem] py-[0.5rem] w-full bg-white text-black outline-none focus:ring-2 focus:ring-highlight1"
       />
 
       <input
@@ -92,7 +93,7 @@ const ContactForm = () => {
         placeholder="Subject"
         value={formData.subject}
         onChange={handleChange}
-        className="w-full bg-white text-black outline-none focus:ring-2 focus:ring-highlight1"
+        className="pl-[0.5rem]  py-[0.5rem] w-full bg-white text-black outline-none focus:ring-2 focus:ring-highlight1"
       />
 
       <textarea
@@ -102,7 +103,7 @@ const ContactForm = () => {
         value={formData.message}
         onChange={handleChange}
         required
-        className="w-full bg-white text-black outline-none resize-none focus:ring-2 focus:ring-highlight1"
+        className="pl-[0.5rem] py-[0.5rem] w-full bg-white text-black outline-none resize-none focus:ring-2 focus:ring-highlight1"
       />
 
       <button

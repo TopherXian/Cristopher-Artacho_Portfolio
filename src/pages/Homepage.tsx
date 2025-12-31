@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Portfolio from "../components/Portfolio"
-import ContactForm from "../components/contactForm"
-
+import ContactForm from "../components/ContactForm"
+import Footer from "../components/Footer"
 import profile_pic from "../assets/images/portrait.jpg"
 
 const Homepage = () => {
@@ -9,7 +9,7 @@ const Homepage = () => {
     <>
       <div className="bg-background">
         {/* LAYER 1 */}
-        <div className=" overflow-hidden
+        <div id="homepage" className="overflow-hidden
         min-h-screen relative">
           <Navbar />
           <div className="flex md:mr-[2rem] lg:gap-[0]
@@ -108,15 +108,15 @@ const Homepage = () => {
           </div>
         </div>
         {/* LAYER 2 */}
-        <div className="min-h-screen relative bg-highlight1 text-white z-10">
+        <div id="about" className="min-h-screen relative bg-highlight1 text-white z-10">
           <div className="xl:pt-[6rem] xl:gap-[18rem]
           lg:pt-[6rem] lg:gap-[6rem] lg:flex-row
-          md:pt-[6rem] md:gap-[6rem] md:flex-row md:px-[0rem]
+          md:py-[3rem] md:gap-[1rem] md:flex-row md:px-[0rem]
           pt-[3rem] py-[5rem] px-[5rem] relative pt-[1rem] gap-[1rem] pb-[4rem] flex flex-col items-center
            ">
             {/* EXPERTISE */}
             <div className=" 
-            md:text-left md:order-1 md:pr-[1rem]
+            md:text-left md:order-1 md:pr-[1rem] md:pt-[0rem]
              pt-[3rem] order-2 relative text-center font-raleway shrink-0 space-y-[1rem]">
               
               <p className="xl:pl-[5rem] xl:text-xl_heading
@@ -181,14 +181,14 @@ const Homepage = () => {
         </div>
 
         {/* LAYER 3 */}
-        <div className="min-h-screen 
-        lg:py-[5rem] 
-        pt-[4rem]
+        <div id="portfolio" className="min-h-screen 
+        lg:py-[3rem] 
+        pt-[1rem]
         relative font-inter flex flex-col">
-          <div className="xl:mr-[9.4vw] xl:ml-[70vw] xl:text-lg_heading xl:pr-[3rem]
-          lg:mr-[9rem] lg:ml-[68vw] lg:text-lg_heading lg:pr-[2rem]
+          <div className="xl:mr-[9rem] xl:ml-[70vw] xl:text-lg_heading xl:pr-[2rem]
+          lg:mr-[6rem] lg:ml-[45rem] lg:text-lg_heading lg:pr-[2rem]
           md:mr-[7rem] md:ml-[42rem] md:text-md_heading md:pr-[1rem]
-          mr-[5rem] ml-[10rem] text-sm_heading pr-[1rem]
+          mr-[2rem] ml-[30rem] text-sm_heading pr-[1rem]
           bg-highlight1  font-bold text-white text-right">
           <p>
             Portfolio
@@ -203,7 +203,7 @@ const Homepage = () => {
         </div>
 
         {/* LAYER 4 */}
-        <div className="xl:py-[8rem] xl:px-[4rem]
+        <div id="contact" className="xl:py-[2rem] xl:px-[4rem]
         lg:py-[6rem] lg:px-[4rem]
         md:py-[5rem] md:px-[3rem] md:flex-row
         py-[4rem] px-[2rem] 
@@ -215,7 +215,7 @@ const Homepage = () => {
               "
             />
           {/* FORM */}
-          <div className=" xl:pt-[1rem] xl:px-[5rem]
+          <div className="
           lg:pt-[1rem] lg:px-[4rem]
           md:pt-[3rem] md:px-[3rem] md:text-left
           pt-[2rem] px-[1rem] text-center
@@ -236,6 +236,7 @@ const Homepage = () => {
             <ContactForm/>
           </div>
         </div>
+        <Footer/>
       </div>
     </>
   );

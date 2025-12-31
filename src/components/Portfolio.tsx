@@ -54,7 +54,8 @@ const Portfolio = () => {
   const project = projects[currentIndex];
 
   return (
-    <div className="lg:mx-[9rem] 
+    <div className="xl:mx-[9rem] 
+    lg:mx-[6rem] 
     md:mx-[7rem] md:mb-[4rem] 
     mx-[2rem] mb-[8rem] bg-highlight2 relative flex-1 z-20">
       <div className="flex flex-col lg:flex-row">
@@ -81,8 +82,8 @@ const Portfolio = () => {
 >
 {/* TITLE */}
   <p className="xl:text-xl_heading 
-  lg:text-lg_heading 
-  md:text-md_heading 
+  lg:text-lg_heading2 
+  md:text-md_heading2 
   text-sm_heading font-raleway font-bold">
     {project.title}
   </p>
@@ -95,14 +96,15 @@ const Portfolio = () => {
   </p>
 
     {/* SLIDER / CONTROLS */}
-    <div className="md:mt-[2rem]
-
+    <div className="lg:mt-[3rem]
+    md:mt-[2rem]
     pb-[1rem] flex justify-between items-center  w-full">
       {/* Navigation buttons */}
       <div className="flex gap-2">
               {/* See More Button */}
       <button
-        className="md:mt-[2rem] md:px-[2rem] md:py-[1rem]
+        className=" lg:mt-[0.5rem] lg:px-[1rem] lg:py-[1rem]
+        md:mt-[2rem] md:px-[2rem] md:py-[1rem]
         mt-[0.5rem] px-[0.5rem] py-[0.5rem] text-intro bg-highlight1 text-white font-inter font-bold"
         onClick={() => window.open("https://github.com/Cristopher-Artacho-WVSU", "_blank")}
       >
@@ -123,7 +125,8 @@ const Portfolio = () => {
         ))}
       </div>
 
-        <button className=" md:mt-[2rem] md:px-[2rem] md:py-[1rem]
+        <button className=" lg:mt-[0.5rem] lg:px-[1rem] lg:py-[1rem]
+        md:mt-[2rem] md:px-[2rem] md:py-[1rem]
         mt-[0.5rem] px-[0.5rem] py-[0.5rem] text-intro bg-highlight1 text-white font-inter font-bold " onClick={nextSlide}>
           Next
         </button>

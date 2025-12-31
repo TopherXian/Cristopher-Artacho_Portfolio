@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Portfolio from "../components/Portfolio"
+import ContactForm from "../components/contactForm"
 
 import profile_pic from "../assets/images/portrait.jpg"
 
@@ -232,59 +233,7 @@ const Homepage = () => {
             font-inter text-white">
               Have questions, ideas, or opportunities to share? I’d love to hear from you! Whether you’re looking to collaborate, need assistance with a project, or just want to connect, feel free to reach out. Let’s bring ideas to life together!
             </p>
-            {/* FORM SECTION */}
-              <form className=" xl:gap-[2rem] xl:pt-[2rem]
-              lg:gap-[2rem] lg:pt-[1rem]
-              md:gap-[1rem] md:pt-[1rem] md:items-start
-              gap-[1rem] pt-[2rem]
-              max-w-xl flex flex-col items-center">
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="xl:px-[1rem] xl:py-[1rem] xl:text-xl_content
-                  lg:px-[1rem] lg:py-[1rem] lg:text-lg_content
-                  md:px-[0.75rem] md:py-[0.75rem] md:text-md_content
-                  px-[0.5rem] py-[0.5rem] text-sm_content
-                  w-full bg-white text-black outline-none focus:ring-2 focus:ring-highlight1 font-inter font-light "
-                />
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="xl:px-[1rem] xl:py-[1rem] xl:text-xl_content
-                  lg:px-[1rem] lg:py-[1rem] lg:text-lg_content
-                  md:px-[0.75rem] md:py-[0.75rem] md:text-md_content
-                  px-[0.5rem] py-[0.5rem] text-sm_content
-                  w-full bg-white text-black outline-none focus:ring-2 focus:ring-highlight1 font-inter font-light"
-                />
-                <input
-                  placeholder="Subject"
-                  className="xl:px-[1rem] xl:py-[1rem] xl:text-xl_content
-                  lg:px-[1rem] lg:py-[1rem] lg:text-lg_content
-                  md:px-[0.75rem] md:py-[0.75rem] md:text-md_content
-                  px-[0.5rem] py-[0.5rem] text-sm_content
-                  w-full bg-white text-black outline-none focus:ring-2 focus:ring-highlight1 font-inter font-light"
-                />
-
-                <textarea
-                  rows={5}
-                  placeholder="Your Message"
-                  className="xl:px-[1rem] xl:py-[1rem] xl:text-xl_content
-                  lg:px-[1rem] lg:py-[1rem] lg:text-lg_content
-                  md:px-[0.75rem] md:py-[0.75rem] md:text-md_content
-                  px-[0.5rem] py-[0.5rem] text-sm_content
-                  w-full bg-white text-black outline-none resize-none focus:ring-2 focus:ring-highlight1 font-inter font-light"
-                />
-                <button
-                  type="submit"
-                  className=" xl:w-[15rem] xl:py-[1rem] xl:px-[2rem] xl:text-lg_content
-                  lg:w-[15rem] lg:py-[1rem] lg:px-[2rem] lg:text-lg_content
-                  md:w-[14rem] md:py-[1rem] md:px-[1rem] md:text-md_content
-                  w-[14rem] py-[1rem] px-[1rem] text-sm_content
-                  bg-object1 text-white font-bold hover:opacity-90 transition font-inter "
-                >
-                  Send Message
-                </button>
-              </form>
+            <ContactForm/>
           </div>
         </div>
       </div>

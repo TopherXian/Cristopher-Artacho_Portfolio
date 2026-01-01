@@ -21,7 +21,7 @@ const Navbar = () => {
       {/* Desktop / md+ navbar */}
       <nav className="hidden xl:h-[5rem] xl:ml-[4rem] xl:pt-[1rem] 
         lg:h-[5rem] lg:ml-[0rem] lg:pt-[1rem] 
-        md:h-[5rem] md:pl-[20rem] md:pt-[1rem] md:flex
+        md:h-[5rem] md:pl-[15rem] md:pt-[1rem] md:flex
         h-[5rem] pl-[8rem] pt-[1rem] 
         w-full justify-center text-black font-inter"
       >

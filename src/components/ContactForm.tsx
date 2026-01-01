@@ -67,7 +67,7 @@ const ContactForm = () => {
         lg:gap-[2rem] lg:pt-[1rem]
         md:gap-[1rem] md:pt-[1rem] md:items-start
         gap-[1rem] pt-[2rem]
-        max-w-xl flex flex-col items-center
+        w-auto flex flex-col justify-center items-center
       "
     >
       <input

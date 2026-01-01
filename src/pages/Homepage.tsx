@@ -3,6 +3,8 @@ import Portfolio from "../components/Portfolio"
 import ContactForm from "../components/ContactForm"
 import Footer from "../components/Footer"
 import profile_pic from "../assets/images/portrait.jpg"
+import cv from "../assets/cv/cv.pdf"
+import { motion} from "framer-motion";
 
 const Homepage = () => {
   return (
@@ -57,24 +59,61 @@ const Homepage = () => {
              md:justify-start md:text-md_heading2
              justify-center text-sm_heading2
              flex gap-[2rem]"> 
-               <button className=" 
-               md:px-[1rem] md:py-[1rem]
+               <a href={cv} download>
+                <button
+                  className="
+                    md:px-[1rem] md:py-[1rem]
+                    mt-[1rem] px-[0.5rem] py-[0.5rem] text-intro 
+                    bg-highlight1 text-white font-inter font-bold
+                  "
+                >
+                  Download CV
+                </button>
+              </a>
+              <button 
+              className="md:px-[1rem] md:py-[1rem]
               mt-[1rem] px-[0.5rem] py-[0.5rem] text-intro bg-highlight1 text-white mt-[1rem] font-inter font-bold
-               ">
-                Download CV
-              </button>
-              <button className="md:px-[1rem] md:py-[1rem]
-              mt-[1rem] px-[0.5rem] py-[0.5rem] text-intro bg-highlight1 text-white mt-[1rem] font-inter font-bold
-              ">
-                Hire Me
+              "
+                onClick={() => {
+                  const element = document.getElementById("contact");
+                  if (element) element.scrollIntoView();
+                }}
+              >Hire Me
               </button>
              </div>
               {/* PHOTO */}
               <div className="bg-[(../assets/images/SampleImage.png)] h-[90vh] w-[40vw]"></div>
               {/* DECORATIVE SQUARES */}
-              <div className="absolute top-[20vh] left-[0vw] w-[5vw] h-[20vh] bg-object1" />
-              <div className="absolute top-[30vh] right-[0vw] w-[10vw] h-[40vh] bg-object2" />
-              <div className="absolute top-[90vh] right-[0vw] w-[10vw] h-[30vh] bg-object1 z-20" />
+              <motion.div
+                className="md:top-[20vh] md:left-[0vw] md:w-[5vw] md:h-[20vh]
+                top-[10vh] left-[0vw] w-[10vw] h-[15vh]  
+                bg-object1 absolute "
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                style={{ transformOrigin: "left" }}
+              />
+              <motion.div
+                className=" md:top-[30vh] md:right-[0vw] md:w-[10vw] md:h-[30vh]
+                top-[30vh] right-[0vw] w-[10vw] h-[20vh] 
+                bg-object2 absolute"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                style={{ transformOrigin: "right" }}
+              />
+              <motion.div
+                className="md:top-[90vh] md:right-[0vw] md:w-[10vw] md:h-[30vh]
+                top-[80vh] right-[0vw] w-[20vw] h-[20vh]
+                absolute bg-object1 z-20"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                style={{ transformOrigin: "right" }}
+              />
             </div>
             {/* PORTRAIT */}
             <div className="flex-shrink-0
@@ -115,10 +154,16 @@ const Homepage = () => {
           pt-[3rem] py-[5rem] px-[5rem] relative pt-[1rem] gap-[1rem] pb-[4rem] flex flex-col items-center
            ">
             {/* EXPERTISE */}
-            <div className=" 
+            <motion.div 
+            className=" 
             md:text-left md:order-1 md:pr-[1rem] md:pt-[0rem]
-             pt-[3rem] order-2 relative text-center font-raleway shrink-0 space-y-[1rem]">
-              
+            pt-[3rem] order-2 relative text-center font-raleway shrink-0 space-y-[1rem]"
+            initial={{ opacity: 0, y: 50 }}        // start 50px below & invisible
+            whileInView={{ opacity: 1, y: 0 }}     // move up to normal position & fade in
+            viewport={{ once: false }}              // animate only once
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            >
+            
               <p className="xl:pl-[5rem] xl:text-xl_heading
               lg:pl-[5rem] lg:text-lg_heading
               md:pl-[3rem] md:text-md_heading
@@ -153,11 +198,15 @@ const Homepage = () => {
             text-sm_content">
               AI & ML using Python, Java and C++, Arduino
             </p>
-            </div>
+            </motion.div>
             {/* DESCRIPTION */}
-          <div className="
+          <motion.div className="
           md:text-left md:order-2 md:pr-[1rem]
-          order-1 text-center relative ">
+          order-1 text-center relative "
+          initial={{ opacity: 0, y: 50 }}        // start 50px below & invisible
+          whileInView={{ opacity: 1, y: 0 }}     // move up to normal position & fade in
+          viewport={{ once: false }}              // animate only once
+          transition={{ duration: 0.6, ease: "easeOut" }}>
             <p className="xl:text-xl_section
             lg:text-lg_section
             md:text-md_section
@@ -174,9 +223,17 @@ const Homepage = () => {
               <p className="lg:pt-[2rem]
               pt-[1rem]
               ">By bridging the gap between concept and execution, I aim to build solutions that feel alive, meaningful, and future-ready—shaping the digital world one creation at a time.</p></p>
-          </div>
+          </motion.div>
             {/* DECORATIVE SQUARES */}
-            <div className="absolute top-[80vh] left-[0vw] w-[20vw] h-[30vh] bg-object2" />
+            <motion.div
+              className=" md:top-[80vh] md:left-[0vw] md:w-[15vw] md:h-[30vh]
+              top-[90vh] left-[0vw] w-[15vw] h-[30vh] absolute bg-object2"
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              style={{ transformOrigin: "left" }}
+            />
           </div>
         </div>
 
@@ -198,8 +255,23 @@ const Homepage = () => {
          <Portfolio />
           
           {/* DECORATIVE SQUARES */}
-          <div className="absolute top-[30vh] left-[0vw] w-[5vw] h-[30vh] bg-object1 z-10" />
-          <div className="absolute top-[80vh] right-[0vw] w-[10vw] h-[40vh] bg-object2 z-10" />
+         <motion.div
+            className="absolute top-[30vh] left-[0vw] w-[5vw] h-[30vh] bg-object1 z-10"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.5 }}
+            style={{ transformOrigin: "left" }}
+          />
+          <motion.div
+            className="absolute top-[80vh] right-[0vw] w-[10vw] h-[40vh] bg-object2 z-10"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.5 }}
+            style={{ transformOrigin: "right" }}
+          />
+
         </div>
 
         {/* LAYER 4 */}
